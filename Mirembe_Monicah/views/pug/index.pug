@@ -1,0 +1,59 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/css/styles.css')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous')
+  title Registration form
+.container
+  form.mony(action='/api/regregister' name='register' onsubmit='return Validate()' method='POST')
+    header
+      h2.btn.btn-dark.title GENQ KYC FORM
+    .section
+      h4 Bio-Data
+      .row
+        .col
+          input.form-control(type='text' name='firstName' placeholder='First name' aria-label='First name')
+          span#firstnameError
+        .col
+          input.form-control(type='text' name='lastName' placeholder='Last name' aria-label='Last name')
+          span#lastnameError
+      .row
+        .col
+          input.form-control(type='text' name='date' placeholder='Date Of Birth' aria-label='date-of-birth')
+          span#dateError
+        .col
+          input.form-control(type='text' name='gender' placeholder='Gender' aria-label='gender')
+          span#genderError
+    .section
+      h4 Location
+      .row
+        .col
+          input.form-control(type='text' name='country' placeholder='Country' aria-label='country')
+          span#countryError
+        .col
+          input.form-control(type='text' name='state' placeholder='State/District' aria-label='state/district')
+          span#stateError
+      .row
+        .col
+          input.form-control(type='text' name='town' placeholder='Town' aria-label='town')
+          span#townError
+        .col
+          input.form-control(type='text' name='zipcode' placeholder='Zip Code' aria-label='zipcode')
+          span#zipcodeError
+    .section
+      h4 Contacts/Address
+      .row
+        .col
+          input.form-control(type='text' name='phoneNumber1' placeholder='Phone Number1' aria-label='phoneNumber1')
+          span#phoneNumber1Error
+        .col
+          input.form-control(type='text' name='phoneNumber2' placeholder='Phone Number2' aria-label='phoneNumber2')
+          span#phoneNumber2Error
+      .row
+        .col
+          input.form-control(type='text' name='email' placeholder='Email' aria-label='email')
+          span#emailError
+    button.btn.btn-warning.key(type='submit') Submit
+script(src='/js/validate.js')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm' crossorigin='anonymous')
